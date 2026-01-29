@@ -1,0 +1,11 @@
+# Virtual environment folders/files (because your venv is in the repo root)
+share/
+Scripts/
+Lib/
+Include/
+etc/
+pyvenv.cfg
+
+# Python cache
+__pycache__/
+*.pyc
