@@ -5,17 +5,19 @@ import joblib
 import numpy as np
 from sklearn.metrics import accuracy_score
 
-# Chemins absolus complets
-DATA_PATH = r"C:\Users\bahab\Desktop\rrr\data"
+from pathlib import Path
 
-adult_clean = f"{DATA_PATH}\\adult_clean.csv"
-train_fair = f"{DATA_PATH}\\train_fair.csv"
-rfc_naive = f"{DATA_PATH}\\rfc_naive.pkl"
-rfc_resampled = f"{DATA_PATH}\\rfc_resampled.pkl"
-rfc_fair = f"{DATA_PATH}\\rfc_fair.pkl"
-scaler_naive = f"{DATA_PATH}\\scaler_naive.pkl"
-scaler_resampled = f"{DATA_PATH}\\scaler_resampled.pkl"
-scaler_fair = f"{DATA_PATH}\\scaler_fair.pkl"
+BASE_DIR = Path(__file__).resolve().parent
+DATA_PATH = BASE_DIR / "data"
+
+adult_clean = DATA_PATH / "adult_clean.csv"
+train_fair = DATA_PATH / "train_fair.csv"
+rfc_naive = DATA_PATH / "rfc_naive.pkl"
+rfc_resampled = DATA_PATH / "rfc_resampled.pkl"
+rfc_fair = DATA_PATH / "rfc_fair.pkl"
+scaler_naive = DATA_PATH / "scaler_naive.pkl"
+scaler_resampled = DATA_PATH / "scaler_resampled.pkl"
+scaler_fair = DATA_PATH / "scaler_fair.pkl"
 
 # Cache
 @st.cache_data
